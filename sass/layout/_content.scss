@@ -1,0 +1,174 @@
+.game-container {
+    display: grid;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    grid-template-columns: 50px repeat(4, 1fr);
+    grid-template-rows:50px repeat(4, 1fr);
+    background-color: $color-fred;
+    color: #fff;
+    width: 800px;
+    height: 570px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    margin: 2rem 0;
+    margin-top: 2rem;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    justify-self: center;
+
+    @media only screen and(max-width: $bp-large){
+        width: 700px;
+        height: 500px;
+        padding-bottom: 4rem;
+    }
+    @media only screen and(max-width: $bp-small){
+        width: 550px;
+        height: 400px;
+        padding-bottom: 4rem;
+        margin-top: 3rem;
+        grid-row: 1/2;
+        padding: 0;
+    }
+    @media only screen and(max-width: $bp-smallest){
+        grid-template-columns: 30px repeat(4, 1fr);
+        grid-template-rows:30px repeat(4, 1fr);
+        width: 360px;
+        height: 300px;
+        padding-bottom: 1rem;
+        grid-row: 1/2;
+        padding-right: 1rem;
+    }
+  }
+  
+  .letter1 {
+    grid-column: 2/3;
+  }
+  
+  .letter2 {
+    grid-column: 3/4;
+  }
+  
+  .letter3 {
+    grid-column: 4/5;
+  }
+  
+  .letter4 {
+    grid-column: 5/6;
+  }
+  
+  .number1 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+  
+  .number2 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .number3 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+  .number4 {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  
+  .game-tiles {
+    grid-row: 2/6;
+    grid-column: 2/6;
+    display: flex;
+    flex: 1;
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+    perspective: 1000px;
+  }
+  
+  .showTiles {
+    display: flex;
+  }
+  
+  .card {
+    width: 19%;
+    height: 16%;
+    background-color: $color-fred;
+    position: relative;
+    border: none;
+    margin: 2% 3%;
+  }
+
+  
+  .memory-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    position: relative;
+    transform: scale(1);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease;
+  
+    &:focus {
+      outline-style: none;
+    }
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97) translateY(3px);
+    transition: transform 0.2s ease-in;
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  img.image {
+  
+  
+    height: 80%;
+    width:60%;
+  }
+  
+  .imgBg {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 38%;
+    margin-top: .5rem;
+  }
+  
+  imgBg.smaller {
+    width: 80%;
+  }
+  
+  
+  .front-face,
+  .back-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+    // padding: 1vw;
+    position: absolute;
+    background: $color-fyellow;
+    transform: rotateX(0deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .front-face {
+    transform: rotateX(0deg);
+    transform: rotateY(180deg);
+    background-color: #fff;
+    color: $color-slate;
+    line-height: 2rem;
+  }

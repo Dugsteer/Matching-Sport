@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" A fun, free  online food card matching game for learning English from Esl-ology.com"
+    />
+    <meta
+      name="keywords"
+      content="Clothes matching vocabulary online ESL game"
+    />
+    <title>Food Matching Game</title>
+    <link rel="icon" type="image/png" href="favicon.png" ; />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="csi.min.js"></script>
+  </head>
+  <body>
+    <div class="loader-div" id="loaderDiv" onload="checkForTop();">
+      <div class="loader-container">
+        <img class="apple ghost" src="img/loader/apple.png" alt="" />
+        <img class="pears ghost" src="img/loader/pears.png" alt="" />
+        <img class="plums ghost" src="img/loader/plums.png" alt="" />
+      </div>
+    </div>
+
+    <div class="nav-bar" id="navbar">
+      <a href="index.html" class="nav-bar__logo">
+        <svg class="icon-header nav-bar__logo-img">
+          <use xlink:href="sprite2.svg#Buho" onclick="scrollUp()"></use>
+        </svg>
+      </a>
+      <h3 class="nav-bar__title">Esl-Ology.Com</h3>
+      <div class="nav-bar__title-page">
+        <span class="nav-bar__title-page-main" id="pageTitle"
+          >FOOD MATCHING FUN</span
+        >
+      </div>
+      <div class="nav-bar__links">
+        <a href="index.html" class="nav-bar__link link3">Home</a>
+        <svg
+          viewBox="0 0 100 80"
+          width="40"
+          height="20"
+          onclick="toggler();"
+          id="menu"
+          class="menu"
+        >
+          <rect width="100" height="12"></rect>
+          <rect y="30" width="100" height="12"></rect>
+          <rect y="60" width="100" height="12"></rect>
+        </svg>
+      </div>
+    </div>
+
+    <div id="wrapper" class="wrapper">
+      <div class="sidebar-container" id="sidebar">
+        <div data-include="sidebar.html"></div>
+      </div>
+
+      <div class="introduction">
+        <div class="picsdiv">
+          <div class="introduction__img" onclick="turnMe();" id="mainpic">
+            <div id="orange" class="orange">
+              <img src="img/mainpic/Orange1.png" />
+            </div>
+            <img src="img/mainpic/oranges.png" />
+          </div>
+        </div>
+        <div class="introduction__text">
+          <h1>FREE FOOD FUN!</h1>
+          <p>
+            Match the foods to their names by clicking on the cards to turn them
+            over. The team with the most pairs wins! There are three sets to
+            choose from.
+          </p>
+          <div class="introduction__choices">
+            <button class="introduction__set" id="set1">Set 1</button>
+            <p class="setlist">
+              apple, banana, bread, burger, cake, carrot, chicken, chips
+            </p>
+
+            <button class="introduction__set" id="set2">Set 2</button>
+            <p class="setlist">
+              donut, egg, fish, grapes, honey, ice-cream, jam, kiwi
+            </p>
+
+            <button class="introduction__set" id="set3">Set 3</button>
+            <p class="setlist">
+              lettuce, mushrooms, nuts, onion, pizza, potatoes, spaghetti,
+              tomato
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div class="empty"></div>
+        <div class="h4 letter1">A</div>
+        <div class="h4 letter2">B</div>
+        <div class="h4 letter3">C</div>
+        <div class="h4 letter4">D</div>
+        <div class="empty"></div>
+        <div class="h4 number1">1</div>
+        <div class="h4 number2">2</div>
+        <div class="h4 number3">3</div>
+        <div class="h4 number4">4</div>
+
+        <div class="game-tiles game-tiles1 showTiles" id="game-tiles"></div>
+      </div>
+
+      <div class="links">
+        <p class="links__text">Try our other TEFL Food games.</p>
+        <div class="links__images">
+          <div class="links__images-1 figure">
+            <a href="flashcard-foods.html">
+              <img src="img/Flashcard-food.jpg" alt=""
+            /></a>
+            <figcaption>Food Photo Flashcards</figcaption>
+          </div>
+          <div class="links__images-1 figure">
+            <a href="bingo-clothes.html">
+              <img src="img/BingoFood.jpg" alt=""
+            /></a>
+            <figcaption>Food Bingo with Printable Cards</figcaption>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__copyright" id="footer">
+        <p>© 2020 Copyright Esl-ology.com & copyright owners.</p>
+        <p>
+          Vectors & images by
+          <a href="https://www.vecteezy.com">Vecteezy</a>&nbsp&nbsp<a
+            href="https://pixabay.com"
+            >Pixabay</a
+          >&nbsp&nbsp<a href="https://unsplash.com">Unsplash </a>. Icons made by
+          <a href="https://icon54.com/" title="Pixel perfect">Pixel perfect</a>
+          from
+          <a href="https://www.flaticon.com/" title="Flaticon">
+            www.flaticon.com</a
+          >
+          Thanks,guys!
+        </p>
+      </div>
+    </footer>
+
+    <div class="hidden">
+      <img src="sprite2.svg" style="display: none" />
+      <script>
+        <!--//--><![CDATA[//><!--
+        var images = new Array();
+        function preload() {
+          for (i = 0; i < preload.arguments.length; i++) {
+            images[i] = new Image();
+            images[i].src = preload.arguments[i];
+          }
+        }
+        preload(
+          "img/apple.png",
+          "img/carrot.png",
+          "img/grapes.png",
+          "img/lettuce.png",
+          "img/potatoes.png",
+          "img/banana.png",
+          "img/chicken.png",
+          "img/honey.png",
+          "img/spaghetti.png",
+          "img/bread.png",
+          "img/chips.png",
+          "img/ice-cream.png",
+          "img/mushrooms.png",
+          "img/tomato.png",
+          "img/burger.png",
+          "img/donut.png",
+          "img/nuts.png",
+          "img/cake.png",
+          "img/egg.png",
+          "img/jam.png",
+          "img/",
+          "img/onion.png",
+          "img/cardback.png",
+          "img/fish.png",
+          "img/kiwi.png",
+          "img/pizza.png"
+        );
+        //--><!]]>
+      </script>
+    </div>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
