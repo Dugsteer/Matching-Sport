@@ -1,108 +1,102 @@
 .sidebar {
-  grid-row: 1/5;
+  grid-row: 1/7;
   grid-column: 1/2;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   background-color: #fff;
-  padding:1rem;
-  height: 100%;
+  padding: 1rem;
   transition: all 0.2s ease-in-out;
 
-
-  @media only screen and (max-width: $bp-medium) {
+  @media only screen and (max-width: 50em) {
     position: absolute;
     width: 100vw;
     z-index: 500;
-    height: auto;
+    height: 100%;
     padding: 3rem;
   }
-  @media only screen and (max-width: $bp-smallest) {
+
+  @media only screen and (max-width: 28em) {
     width: 100vw;
     padding: 6rem;
   }
 }
 .sidebar h2:first-of-type {
-    margin-top: 3rem;
-  }
+  margin-top: 3rem;
+}
 
- .sidebar ul li {
-    list-style-type: none;
-    width: 100%;
-  }
+.sidebar ul li {
+  list-style-type: none;
+  width: 100%;
+}
 
-  .sidebar a {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 2rem;
-    color:#594f73;
-    width: 100%;
-    height: 3rem;
-    padding-left: .5rem;
-  }
-    .sidebard a:hover {
-      background-color: lightgrey;
-    }
-  
+.sidebar a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #594f73;
+  width: 100%;
+  height: 3rem;
+  padding-left: 0.5rem;
+}
+.sidebard a:hover {
+  background-color: lightgrey;
+}
 
-  .sidebar__subtitle {
-    display: flex;
-    position: relative;
-    justify-content:space-between;
-    align-items: center;
-    background-color:#dcd7eb;
-    border-top: 1px solid #2b6498;
-    height: 4rem;
-    line-height: 1.6;
-    padding-left: .5rem;
-    padding-right: 1rem;
-    margin-top: 1rem;
-    width: 100%;
-    cursor: pointer;
-  }
+.sidebar__subtitle {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #dcd7eb;
+  border-top: 1px solid #2b6498;
+  height: 4rem;
+  line-height: 1.6;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  cursor: pointer;
+}
 
-    .sidebard i {
-      position: absolute;
-      right: 2.2rem;
-      top: 20%;
-    }
-  
+.sidebard i {
+  position: absolute;
+  right: 2.2rem;
+  top: 20%;
+}
 
-  .sidebar__instructions {
-    margin-bottom: 2rem;
-    font-size: 1.4rem;
-  }
-   .sidebar ul,
-    .sidebar li {
-      
-      list-style-type: none;
-    }
+.sidebar__instructions {
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+.sidebar ul,
+.sidebar li {
+  list-style-type: none;
+}
 
+.youtube {
+  height: 40px;
+  width: auto;
+  margin-top: 8rem;
+  border: none;
+  outline: none;
+  padding: 10px 0;
+  box-shadow: none;
+}
 
-  
-
-  .youtube {
-    height: 40px;
-    width: auto;
-    margin-top: 8rem;
-    border: none;
-    outline: none;
-    padding: 10px 0;
-    box-shadow: none;
-  }
-
-  .sidebar__set {
-    display: block;
-    padding: 0.5rem;
-    border-radius: 8px;
-    font-weight: bold;
-    height: auto;
-    transform: translateY(-0.5rem);
-    text-transform: uppercase;
-    background-color: green;
-    color: white;
-    margin-top: 2rem;
-  }
+.sidebar__set {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 8px;
+  font-weight: bold;
+  height: auto;
+  transform: translateY(-0.5rem);
+  text-transform: uppercase;
+  background-color: green;
+  color: white;
+  margin-top: 2rem;
+}
 
 .moveSidebar {
   display: none;
@@ -122,27 +116,22 @@
   height: 3rem;
   fill: currentColor;
 }
-  .icon:hover {
-    fill: darkgrey;
-  }
-
+.icon:hover {
+  fill: darkgrey;
+}
 
 .sidebar-container {
-  grid-row: 1/4;
+  grid-row: 1/7;
   grid-column: 1/2;
   height: 100%;
 
-  @media only screen and (max-width: $bp-medium){
+  @media only screen and (max-width: 50em) {
     display: none;
   }
 }
 
 .block {
   display: block;
-}
-
-.sidebar__subtitle:first-of-type {
-  background: #F75F1C;
 }
 
 .icon {
@@ -164,54 +153,51 @@
   line-height: 1.7;
   background-color: #ffe164;
   border-radius: 12px;
-  box-shadow: 3px 3px 4px 4px rgba(0,0,0,0.5);
+  box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.5);
   display: none;
   z-index: 100;
- 
-  @media only screen and(max-width: $bp-large){
+
+  @media only screen and(max-width: 62.5em) {
     top: 80%;
     height: 600px;
     // padding-top: 7rem;
   }
-  @media only screen and(max-width: $bp-small){
+  @media only screen and(max-width: 37.5em) {
     top: 60%;
-    origin: center;
     width: 320px;
     height: 700px;
   }
 }
 
-  .extra a {
+.extra a {
   color: #2b6498;
   display: inline;
+}
+
+.extra__content {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-column-gap: 4rem;
+  align-items: center;
+  width: 400px;
+  height: 640px;
+
+  @media only screen and(max-width: 37.5em) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr;
+    width: 280px;
+
+    grid-gap: 0;
   }
+}
+.extra-col1,
+.extra-col2 {
+  grid-template-rows: 1fr 5rem;
+}
+.extra p {
+  line-height: 1.4;
+}
 
-
-  .extra__content {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-column-gap: 4rem;
-    align-items: center;
-    width: 400px;
-    height: 640px;
-
-    @media only screen and(max-width: $bp-small){
-      grid-template-columns: 1fr;
-      grid-template-rows: 3fr;
-      width: 280px;
-  
-      grid-gap: 0;
-    }
-
-  }
-    .extra-col1,
-    .extra-col2 {
-      grid-template-rows: 1fr 5rem;
-    }
-     .extra p {
-        line-height: 1.4;
-      }
-    
 p {
   color: #33363b;
 }
@@ -223,25 +209,25 @@ h4 {
   grid-row: 2/3;
   justify-self: start;
   align-self: start;
-  
-  @media only screen and(max-width: $bp-small){
+
+  @media only screen and(max-width: 37.5em) {
     grid-row: 3/4;
     margin-top: 4rem;
   }
 }
 
-.point{
+.point {
   cursor: pointer;
 }
 
 .icon-base {
   width: 5em;
   height: 5rem;
-  fill: #2B6498
+  fill: #2b6498;
 }
-  .icon-base:hover {
-    fill: darkorange;
-  }
+.icon-base:hover {
+  fill: darkorange;
+}
 
 .xc {
   position: absolute;
@@ -252,10 +238,10 @@ h4 {
   cursor: pointer;
 }
 
-  .xc:hover {
-    transform: scale(1.10);
-    opacity: 0.8;
-  }
+.xc:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
 
 .xxc {
   display: flex;

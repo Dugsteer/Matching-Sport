@@ -1,14 +1,22 @@
-// .ads {
-//     background-color: green;
-//     width: 90%;
-//     margin: auto;
-//     height: 60%;
-//  
+.sense {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  width: 100%;
 
-// &-top {
-//     margin-top: 2vw;
-//     grid-row: 1/2;
-// }
+  @media only screen and (max-width:37.5em) {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
 
-// }
+.sense-bottom {
+  grid-row: 4/5;
+  grid-column: 2/3;
+  width: 100%;
+
+  @media only screen and (max-width:37.5em) {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+}
 
