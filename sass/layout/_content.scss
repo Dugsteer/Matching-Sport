@@ -4,7 +4,7 @@
     grid-row: 2/3;
     grid-template-columns: 50px repeat(4, 1fr);
     grid-template-rows:50px repeat(4, 1fr);
-    background-color: $color-fred;
+    background-color: $color-green;
     color: #fff;
     width: 800px;
     height: 570px;
@@ -97,7 +97,7 @@
   .card {
     width: 19%;
     height: 16%;
-    background-color: $color-fred;
+    background-color: $color-green;
     position: relative;
     border: none;
     margin: 2% 3%;
@@ -157,7 +157,7 @@
     text-align: center;
     // padding: 1vw;
     position: absolute;
-    background: $color-fyellow;
+    background: $color-blue;
     transform: rotateX(0deg);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

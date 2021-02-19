@@ -5,24 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content=" A fun, free  online food card matching game for learning English from Esl-ology.com"
+      content=" A fun, free  online sports card matching game for learning English from Esl-ology.com"
     />
     <meta
       name="keywords"
-      content="Clothes matching vocabulary online ESL game"
+      content="Sports matching vocabulary online ESL game"
     />
-    <title>Food Matching Game</title>
+    <title>Sports Matching Game</title>
     <link rel="icon" type="image/png" href="favicon.png" ; />
     <link rel="stylesheet" href="./css/styles.css" />
     <script src="csi.min.js"></script>
   </head>
   <body>
     <div class="loader-div" id="loaderDiv" onload="checkForTop();">
-      <div class="loader-container">
-        <img class="apple ghost" src="img/loader/apple.png" alt="" />
-        <img class="pears ghost" src="img/loader/pears.png" alt="" />
-        <img class="plums ghost" src="img/loader/plums.png" alt="" />
+      <div class="loader-container ghost">
+        <img src="img/loader/basketball.svg" alt="" />
       </div>
+      <div class="basediv"></div>
     </div>
 
     <div class="nav-bar" id="navbar">
@@ -34,7 +33,7 @@
       <h3 class="nav-bar__title">Esl-Ology.Com</h3>
       <div class="nav-bar__title-page">
         <span class="nav-bar__title-page-main" id="pageTitle"
-          >FOOD MATCHING FUN</span
+          >SPORTS MATCHING FUN</span
         >
       </div>
       <div class="nav-bar__links">
@@ -62,34 +61,37 @@
       <div class="introduction">
         <div class="picsdiv">
           <div class="introduction__img" onclick="turnMe();" id="mainpic">
-            <div id="orange" class="orange">
-              <img src="img/mainpic/Orange1.png" />
+            <div id="car" class="car">
+              <img src="img/mainpic/race-car1.png" />
             </div>
-            <img src="img/mainpic/oranges.png" />
+            <div class="race">
+              <img src="img/mainpic/race-track.png" />
+            </div>
           </div>
         </div>
         <div class="introduction__text">
-          <h1>FREE FOOD FUN!</h1>
+          <h1>IT'S MATCH DAY!</h1>
           <p>
-            Match the foods to their names by clicking on the cards to turn them
-            over. The team with the most pairs wins! There are three sets to
-            choose from.
+            Match the sports to their names by clicking on the cards to turn
+            them over. The team with the most pairs wins! There are three sets
+            to choose from.
           </p>
           <div class="introduction__choices">
             <button class="introduction__set" id="set1">Set 1</button>
             <p class="setlist">
-              apple, banana, bread, burger, cake, carrot, chicken, chips
+              archery, badminton, basketball, boxing, climbing, cycling, diving,
+              driving
             </p>
 
             <button class="introduction__set" id="set2">Set 2</button>
             <p class="setlist">
-              donut, egg, fish, grapes, honey, ice-cream, jam, kiwi
+              football, golf, gymnastics, hang-gliding, yoga, hockey,
+              horse-riding, ice-skating
             </p>
 
             <button class="introduction__set" id="set3">Set 3</button>
             <p class="setlist">
-              lettuce, mushrooms, nuts, onion, pizza, potatoes, spaghetti,
-              tomato
+              karate, swimming, tennis, rugby, running, sailing, skiing, surfing
             </p>
           </div>
         </div>
@@ -111,19 +113,19 @@
       </div>
 
       <div class="links">
-        <p class="links__text">Try our other TEFL Food games.</p>
+        <p class="links__text">Try our other TEFL Sport games.</p>
         <div class="links__images">
           <div class="links__images-1 figure">
-            <a href="flashcard-foods.html">
-              <img src="img/Flashcard-food.jpg" alt=""
+            <a href="flashcard-sports.html">
+              <img src="img/FlashcardSports.jpg" alt=""
             /></a>
-            <figcaption>Food Photo Flashcards</figcaption>
+            <figcaption>Sports Photo Flashcards</figcaption>
           </div>
           <div class="links__images-1 figure">
-            <a href="bingo-clothes.html">
-              <img src="img/BingoFood.jpg" alt=""
+            <a href="bingo-sports.html">
+              <img src="img/BingoSports.jpg" alt=""
             /></a>
-            <figcaption>Food Bingo with Printable Cards</figcaption>
+            <figcaption>Sports Bingo with Printable Cards</figcaption>
           </div>
         </div>
       </div>
@@ -159,32 +161,31 @@
           }
         }
         preload(
-          "img/apple.png",
-          "img/carrot.png",
-          "img/grapes.png",
-          "img/lettuce.png",
-          "img/potatoes.png",
-          "img/banana.png",
-          "img/chicken.png",
-          "img/honey.png",
-          "img/spaghetti.png",
-          "img/bread.png",
-          "img/chips.png",
-          "img/ice-cream.png",
-          "img/mushrooms.png",
-          "img/tomato.png",
-          "img/burger.png",
-          "img/donut.png",
-          "img/nuts.png",
-          "img/cake.png",
-          "img/egg.png",
-          "img/jam.png",
-          "img/",
-          "img/onion.png",
-          "img/cardback.png",
-          "img/fish.png",
-          "img/kiwi.png",
-          "img/pizza.png"
+          "img/basketball-ball.png",
+          "img/archery.svg",
+          "img/hang-gliding.svg",
+          "img/skiing.svg",
+          "img/badminton.svg",
+          "img/swimming.svg",
+          "img/surfing.svg",
+          "img/basketball.svg",
+          "img/hockey.svg",
+          "img/boxing.svg",
+          "img/horse-riding.svg",
+          "img/climbing.svg",
+          "img/ice-skating.svg",
+          "img/cycling.svg",
+          "img/karate.svg",
+          "img/diving.svg",
+          "img/yoga.svg",
+          "img/driving.svg",
+          "img/tennis.svg",
+          "img/football.svg",
+          "img/rugby.svg",
+          "img/golf.svg",
+          "img/running.svg",
+          "img/gymnastics.svg",
+          "img/sailing.svg"
         );
         //--><!]]>
       </script>

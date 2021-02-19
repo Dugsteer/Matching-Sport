@@ -50,26 +50,30 @@
         // width: 17vw;
         width: 200px;
         // height: 17vw;
-        height: 280px;
+        height: 300px;
+        padding: 1rem;
         display: flex;
         align-items: center;
         justify-content: space-between;
         align-self: center;
         margin-bottom: 2rem;
         border-radius: 3px;
+        background: $color-green;
         cursor: pointer;
         box-shadow: 3px 3px 3px rgba(0,0,0, 0.4);
 
-        @media only screen and (max-width:$bp-large){
-           width: 200px;
-           height: 280px;
-           margin-right: 2rem;
+        // @media only screen and (max-width:$bp-large){
+        //    width: 200px;
+        //    height: 280px;
+        //    margin-right: 2rem;
         
-           }
+        //    }
 
         & img {
+            transform: rotate(-90deg) translateY(-15%);
            height: 100%;
-           width: 100%;
+           width: 150%;
+
         }
 
      
@@ -115,7 +119,7 @@
         }
       }
       &__set {
-        background-color: $color-fred;
+        background-color: $color-blue;
         height: 30px;
         width: 50px;
         border-radius: 8px;
@@ -177,67 +181,137 @@
     }
 }
 
-.orange {
+.car {
     position: absolute;
-    left: 40px;
-    top: 55px;
-    height: 50%;
-    width: 70%;
-    
+    top: 120px;
+    left: 128px;
+    z-index: 20;
+    height: 18%;
+    width: 28%;
+   
 }
 
-.turnOrange {
-    animation: rotater 4s ease-in-out infinite;
+.runner {
+    animation: racerunner 2s infinite;
 }
 
-@keyframes rotater {
+@keyframes racerunner {
     0% {
-        transform: rotate(0deg);
+        top: 120px;
+        left: 128px;
     }
-    100% {
-        transform: rotate(7200deg);
+    5% {
+        top: 80px;
+        left: 128px;
     }
-}
+   15% {
+       top: 60px;
+       left: 128px;
+       transform: rotate(-30deg);
+   }
+   20% {
+       top: 40px;
+       left: 110px;
+       transform: rotate(-80deg);
+   }
+   25% {
+       top: 30px;
+       left: 80px;
+       transform: rotate(-90deg);
+   }
+   30% {
+       top: 30px;
+       left: 60px;
+       transform: rotate(-110deg);
+   }
+   35% {
+       top: 40px;
+       left: 40px;
+       transform: rotate(-140deg);
+   }
+   40% {
+       top: 60px;
+       left: 30px;
+       transform: rotate(-160deg);
+   }
+   45% {
+       top: 80px;
+       left: 30px;
+       transform: rotate(-180deg);
+   }
+   55% {
+       top: 120px;
+       left: 30px;
+       transform: rotate(-180deg);
+   }
+   60% {
+       top: 180px;
+       left: 30px;
+       transform: rotate(-180deg);
+   }
+   65% {
+       top: 190px;
+       left: 40px;
+       transform: rotate(-200deg);
+   }
+   70% {
+       top: 210px;
+       left: 80px;
+       transform: rotate(-240deg);
+   }
+   75% {
+       top: 200px;
+       left: 110px;
+       transform: rotate(-280deg);
+   }
+   80% {
+       top: 180px;
+       left: 120px;
+       transform: rotate(-300deg);
+   }
+   84.9% { top: 160px;
+    left: 125px;
+    transform: rotate(-340deg);
+    opacity: 1;
 
-.bugbutton {
-    position: absolute;
-    left: 35%;
-    top: 60%;
-    height: 30px;
-    width: 120px;
-    border-radius: 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 2rem;
-    color: #000;
-    background-color: #fff;
-    box-shadow: $box-shadow-large;
-    cursor: pointer;
+   }
+   85% {
+       top: 160px;
+       left: 125px;
+       transform: rotate(-340deg);
+       opacity: 0;
+   }
+   85.1%{
+       top: 160px;
+       left: 125px;
+       transform:rotate(0);
+       opacity: 1;
+   }
+   90% {
+       top: 140px;
+       left: 125px;
+       transform: rotate(0);
+       opacity: 1;
+   }
+   95% {
+       top: 130px;
+       left: 128px;
+       transform: rotate(0);
+       opacity: 1;
+   }
+   100% {
+       top: 120px;
+       left: 128px;
+       transform: rotate(0);
+       opacity: 1;
+   }
 
-}
 
-.bugvisible {
-    display: block;
-}
 
-.bugbutton:hover {
-    transform: translateY(2px);
-    box-shadow: $box-shadow-small;
-}
-.links {
-    margin-top: 3rem;
-}
 
-.rightmove {
-    animation: goright 2s;
-}
-@keyframes goright {
-    0% {
-        transform: translateX(0);
-    }
 
-    100% {
-        transform: translateX(4rem);
-    }
+   
+
+   
 }
 
